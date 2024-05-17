@@ -1,11 +1,11 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, 
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: false,
   theme: {
     extend: {},
   },
   variants: {
     extend: {},
   },
-  plugins: [],
-}
+  plugins: [require("tailwind-scrollbar")],
+};
