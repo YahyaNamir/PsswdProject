@@ -46,7 +46,7 @@ function RightSideMenu({ setProjectSelected }) {
 
       {showLog && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-gray-800 bg-opacity-50 absolute inset-0"></div>
+          <div className="bg-gray-200 bg-opacity-50 absolute inset-0"></div>
           <div className="bg-white p-6 rounded-lg shadow-lg z-10">
             <h2 className="text-xl font-semibold mb-4 text-black">
               Confirm Logout

@@ -99,13 +99,13 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
         >
           Subscription
         </Link>
-        <a
+        {/* <a
           href="/"
           className="block py-2 px-3 rounded hover:bg-gray-300"
           onClick={handleLogoutClick}
         >
           Logout
-        </a>
+        </a> */}
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
           Domains
         </h2>
@@ -121,16 +121,16 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
         >
           Subscription
         </Link>
-        <a
+        {/* <a
           href="/"
           className="block py-2 px-3 rounded hover:bg-gray-300"
           onClick={handleLogoutClick}
         >
           Logout
-        </a>
+        </a> */}
       </nav>
 
-      {showLog && (
+      {/* {showLog && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="bg-gray-800 bg-opacity-50 absolute inset-0"></div>
           <div className="bg-white p-6 rounded-lg shadow-lg z-10">
@@ -152,7 +152,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
