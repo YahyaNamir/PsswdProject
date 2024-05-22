@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TopMenu from "./menus/TopMenu";
 import Sidebar from "./menus/Sidebar";
@@ -27,27 +27,16 @@ function App() {
     return savedProject ? JSON.parse(savedProject) : null;
   });
 
-  useEffect(() => {
-    if (projectSelected !== null) {
-      localStorage.setItem("projectSelected", JSON.stringify(projectSelected));
-    } else {
-      localStorage.removeItem("projectSelected");
-    }
-  }, [projectSelected]);
-
-  
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        
+        <TopMenu />
         <div className="flex flex-1">
-          {projectSelected && (
-            <Sidebar
-              projectId={projectSelected}
-              setProjectSelected={setProjectSelected}
-            />
-          )}
-          <main className="flex-1 p-8 bg-white">
+          <Sidebar
+            projectId={projectSelected}
+            setProjectSelected={setProjectSelected}
+          />
+          <main className="flex-1 flex p-8 bg-white ml-64 mr-16 overflow-y-auto">
             <Routes>
               <Route
                 path="/"
@@ -103,8 +92,9 @@ function App() {
               />
               <Route path="/project/:projectId/domain" element={<Domain />} />
             </Routes>
-            <RightSideMenu />
           </main>
+          <RightSideMenu projectId={projectSelected}
+            setProjectSelected={setProjectSelected}/>
         </div>
       </div>
     </Router>

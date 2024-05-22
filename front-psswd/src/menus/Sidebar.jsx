@@ -8,6 +8,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
   const logOut = () => {
     setProjectSelected(null);
     localStorage.removeItem("projectSelected");
+    setShowLog(false);
     navigate("/");
   };
 
@@ -17,12 +18,12 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
   };
 
   return (
-    <div className="overflow-y-auto h-screen w-64 bg-gray-100 text-gray-900 flex flex-col border-r border-gray-300">
+    <div className="h-screen w-64 bg-gray-100 text-gray-900 flex flex-col border-r border-gray-300 fixed top-0 left-0">
       <div className="p-4 border-b border-gray-300">
-        <h1 className="text-xl font-bold text-gray-800 ">IWACO</h1>
+        <h1 className="text-xl font-bold text-gray-800">IWACO</h1>
       </div>
 
-      <nav className="flex-1 p-4 space-y-2">
+      <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
           Getting Started
         </h2>
@@ -33,7 +34,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
           Introduction
         </Link>
         <Link
-          to={`/project/${projectId}/Cdc`}
+          to={`/project/${projectId}/cdc`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           CDC
@@ -63,7 +64,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
           Architectures
         </Link>
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
-          Architectures
+          Updates
         </h2>
         <Link
           to={`/project/${projectId}/update`}
@@ -138,7 +139,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
             <div className="flex justify-end">
               <button
                 onClick={() => setShowLog(false)}
-                className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 hover:bg-gray-400 "
+                className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 hover:bg-gray-400"
               >
                 Cancel
               </button>
