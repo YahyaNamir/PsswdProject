@@ -25,7 +25,7 @@ function RightSideMenu({ setProjectSelected }) {
   };
 
   return (
-    <div className="fixed top-0 right-0 h-full w-16 bg-slate-700   text-white flex flex-col items-center py-4 space-y-4">
+    <div className="fixed top-0 right-0 h-full w-16 bg-slate-700 text-white flex flex-col items-center py-4 space-y-4">
       <FontAwesomeIcon
         icon={faEnvelope}
         className="text-xl hover:text-gray-400 cursor-pointer"
@@ -38,16 +38,18 @@ function RightSideMenu({ setProjectSelected }) {
         icon={faCog}
         className="text-xl hover:text-gray-400 cursor-pointer"
       />
-      <FontAwesomeIcon
-        icon={faSignOutAlt}
-        className="text-xl text-red-900 hover:text-red-400 cursor-pointer mt-auto"
-        onClick={handleLogoutClick}
-      />
+      <div className="absolute bottom-5 right-5">
+        <FontAwesomeIcon
+          icon={faSignOutAlt}
+          className="text-xl hover:text-gray-400 cursor-pointer"
+          onClick={handleLogoutClick}
+        />
+      </div>
 
       {showLog && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-gray-200 bg-opacity-50 absolute inset-0"></div>
-          <div className="bg-white p-6 rounded-lg shadow-lg z-10">
+          <div className="absolute inset-0 bg-opacity-50"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg z-10">
             <h2 className="text-xl font-semibold mb-4 text-black">
               Confirm Logout
             </h2>

@@ -13,7 +13,7 @@ const Help = () => {
         les indicateurs clés de performance (KPI) de la Business Intelligence
         (BI) en ce qui concerne la date de confirmation des commandes.
       </p>
-      
+
       <div className="flex flex-col md:flex-row mb-6">
         <img
           src={zendesk_synch}
@@ -22,13 +22,13 @@ const Help = () => {
         />
         <p className="text-gray-700 text-lg leading-relaxed flex-grow">
           Une fois que l'utilisateur confirme la commande, le webhook de Zendesk
-          est déclenché et il communique avec l'API de synchronisation pour mettre
-          à jour la date de confirmation associée à cette commande. Cette mise à
-          jour est essentielle pour maintenir les données du système à jour et
-          fournir une vue précise de l'état de la commande.
+          est déclenché et il communique avec l'API de synchronisation pour
+          mettre à jour la date de confirmation associée à cette commande. Cette
+          mise à jour est essentielle pour maintenir les données du système à
+          jour et fournir une vue précise de l'état de la commande.
         </p>
       </div>
-      
+
       <div className="flex flex-col md:flex-row items-center mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg transition-shadow duration-300">
         <img
           src={exemple_api}
@@ -37,7 +37,14 @@ const Help = () => {
         />
         <div className="text-gray-700 text-base leading-relaxed flex-grow">
           <strong>Exemple d'execution:</strong>
-          <br /> End point: POST https://synchro.isla-dev.com/api/bi
+          <br /> End point:{" "}
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3 py-1 me-2 mb-2 "
+          >
+            POST
+          </button>
+          https://synchro.isla-dev.com/api/bi
           <br /> Header: Header Authorization: Bearer xxx…
           <br /> Body: {'{"project": "project_name","id": "shopify_order_id"}'}
           <br /> Exemple:
@@ -51,19 +58,59 @@ const Help = () => {
           <strong>Reponse:</strong>
           <div>
             <div className="flex items-center bg-gray-100 p-2 rounded-lg mb-2 hover:bg-gray-200 transition-colors duration-300">
-              <div className="flex-grow cursor-pointer">200 Commande déjà confirmée</div>
+              <div className="flex-grow cursor-pointer">
+                <button
+                  type="button"
+                  class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-3 py-1 me-2 mb-2 "
+                >
+                  200
+                </button>{" "}
+                Commande déjà confirmée
+              </div>
             </div>
             <div className="flex items-center bg-gray-100 p-2 rounded-lg mb-2 hover:bg-gray-200 transition-colors duration-300">
-              <div className="flex-grow cursor-pointer">201 Commande confirmée</div>
+              <div className="flex-grow cursor-pointer">
+                <button
+                  type="button"
+                  class="text-white bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm px-3 py-1 me-2 mb-2 "
+                >
+                  201
+                </button>{" "}
+                Commande confirmée
+              </div>
             </div>
             <div className="flex items-center bg-gray-100 p-2 rounded-lg mb-2 hover:bg-gray-200 transition-colors duration-300">
-              <div className="flex-grow cursor-pointer">401 Une authentification est nécessaire</div>
+              <div className="flex-grow cursor-pointer">
+                <button
+                  type="button"
+                  class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-sm px-3 py-1 me-2 mb-2 "
+                >
+                  401
+                </button>{" "}
+                Une authentification est nécessaire
+              </div>
             </div>
             <div className="flex items-center bg-gray-100 p-2 rounded-lg mb-2 hover:bg-gray-200 transition-colors duration-300">
-              <div className="flex-grow cursor-pointer">404 Commande n'existe pas sur Shopify</div>
+              <div className="flex-grow cursor-pointer">
+                <button
+                  type="button"
+                  class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm px-3 py-1 me-2 mb-2 "
+                >
+                  404
+                </button>{" "}
+                Commande n'existe pas sur Shopify
+              </div>
             </div>
             <div className="flex items-center bg-gray-100 p-2 rounded-lg mb-2 hover:bg-gray-200 transition-colors duration-300">
-              <div className="flex-grow cursor-pointer">406 Body request error</div>
+              <div className="flex-grow cursor-pointer">
+                <button
+                  type="button"
+                  class="text-white bg-red-800 hover:bg-red-900 font-medium rounded-lg text-sm px-3 py-1 me-2 mb-2 "
+                >
+                  406
+                </button>{" "}
+                Body request error
+              </div>
             </div>
           </div>
         </div>

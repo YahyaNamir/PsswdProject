@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Sidebar = ({ projectId, setProjectSelected }) => {
   const navigate = useNavigate();
@@ -20,85 +20,87 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
   return (
     <div className="h-screen w-64 bg-gray-100 text-gray-900 flex flex-col border-r border-gray-300 fixed top-0 left-0">
       <div className="p-4 border-b border-gray-300">
-        <h1 className="text-xl font-bold text-gray-800">IWACO</h1>
+        <h1 className="text-2xl font-bold text bg-clip-text text-transparent bg-gradient-to-r from-stone-900 to-blue-200">
+          IWACO
+        </h1>
       </div>
 
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
           Getting Started
         </h2>
-        <Link
+        <NavLink
           to={`/project/${projectId}/introduction`}
-          className="block py-1 px-3 rounded hover:bg-gray-300"
+          className="block py-2 px-3 rounded hover:bg-gray-300 "
         >
           Introduction
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/cdc`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           CDC
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/installation`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Installation
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/technologies`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Technologies
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/ci_cd`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           CI/CD
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/architectures`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Architectures
-        </Link>
+        </NavLink>
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
           Updates
         </h2>
-        <Link
+        <NavLink
           to={`/project/${projectId}/update`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Update
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/help`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Help
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/settings`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Settings
-        </Link>
+        </NavLink>
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
           Services
         </h2>
-        <Link
+        <NavLink
           to={`/project/${projectId}/details_S`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Details
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/subscription_S`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Subscription
-        </Link>
+        </NavLink>
         {/* <a
           href="/"
           className="block py-2 px-3 rounded hover:bg-gray-300"
@@ -109,28 +111,21 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
           Domains
         </h2>
-        <Link
+        <NavLink
           to={`/project/${projectId}/details_D`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Details
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to={`/project/${projectId}/subscription_D`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Subscription
-        </Link>
-        {/* <a
-          href="/"
-          className="block py-2 px-3 rounded hover:bg-gray-300"
-          onClick={handleLogoutClick}
-        >
-          Logout
-        </a> */}
+        </NavLink>
       </nav>
 
-      {/* {showLog && (
+      {showLog && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="bg-gray-800 bg-opacity-50 absolute inset-0"></div>
           <div className="bg-white p-6 rounded-lg shadow-lg z-10">
@@ -152,7 +147,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
             </div>
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 };

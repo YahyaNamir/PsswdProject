@@ -27,6 +27,12 @@ function App() {
     return savedProject ? JSON.parse(savedProject) : null;
   });
 
+  const projects = [
+    { id: 1, name: "Project A" },
+    { id: 2, name: "Project B" },
+    { id: 3, name: "Project C" },
+  ];
+  
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
@@ -35,6 +41,7 @@ function App() {
           <Sidebar
             projectId={projectSelected}
             setProjectSelected={setProjectSelected}
+            projects={projects}
           />
           <main className="flex-1 flex p-8 bg-white ml-64 mr-16 overflow-y-auto">
             <Routes>
@@ -93,8 +100,7 @@ function App() {
               <Route path="/project/:projectId/domain" element={<Domain />} />
             </Routes>
           </main>
-          <RightSideMenu projectId={projectSelected}
-            setProjectSelected={setProjectSelected}/>
+          <RightSideMenu setProjectSelected={setProjectSelected} />
         </div>
       </div>
     </Router>
