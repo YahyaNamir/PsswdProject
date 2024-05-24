@@ -7,7 +7,7 @@ const Details_S = () => {
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
-        DÉTAILS DU PROJET {projectId}
+        DÉTAILS DU PROJET 
       </h1>
 
       <div className="bg-white shadow-md rounded-lg p-6 mb-8">

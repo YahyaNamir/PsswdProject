@@ -33,9 +33,9 @@ const MyProjectsList = ({ setProjectSelected }) => {
       <table className="w-full">
         <thead>
           <tr className="bg-gray-200 text-black-900 font-semibold ">
-            <th className="py-3 px-4 hover:bg-gray-400 rounded-md transition duration-400 ">Name</th>
-            <th className="py-3 px-4 hover:bg-gray-400 rounded-md transition duration-400 ">Description</th>
-            <th className="py-3 px-4 hover:bg-gray-400 rounded-md transition duration-400 ">Date</th>
+            <th className="py-3 px-4 hover:bg-gray-400 transition duration-400 ">Name</th>
+            <th className="py-3 px-4 hover:bg-gray-400 transition duration-400 ">Description</th>
+            <th className="py-3 px-4 hover:bg-gray-400 transition duration-400 ">Date</th>
           </tr>
         </thead>
         <tbody>

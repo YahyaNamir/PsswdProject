@@ -27,7 +27,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
 
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
-          Getting Started
+          <b>Getting Started</b>
         </h2>
         <NavLink
           to={`/project/${projectId}/introduction`}
@@ -66,7 +66,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
           Architectures
         </NavLink>
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
-          Updates
+          <b>Updates</b>
         </h2>
         <NavLink
           to={`/project/${projectId}/update`}
@@ -87,7 +87,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
           Settings
         </NavLink>
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
-          Services
+          <b>Services</b>
         </h2>
         <NavLink
           to={`/project/${projectId}/details_S`}
@@ -109,7 +109,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
           Logout
         </a> */}
         <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
-          Domains
+          <b>Domains</b>
         </h2>
         <NavLink
           to={`/project/${projectId}/details_D`}
