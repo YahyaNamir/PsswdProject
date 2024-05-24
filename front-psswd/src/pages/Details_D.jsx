@@ -31,24 +31,35 @@ const Details_D = () => {
         </p>
         <div className="flex justify-center mb-8">
           <img
+            target="_blank"
+            rel="noopener noreferrer"
             src={Zendesk}
             alt="Zendesk"
-            className="h-12 mx-2 filter grayscale hover:grayscale-0 transition-transform duration-200 transform hover:scale-110"
+            className=" cursor-pointer  h-12 mx-8 filter grayscale hover:grayscale-0 transition-transform duration-200 transform hover:scale-110"
           />
           <img
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://shopify.dev/docs/api/admin-rest"
             src={shopify}
             alt="Shopify"
-            className="h-12 mx-2 filter grayscale hover:grayscale-0 transition-transform duration-200 transform hover:scale-110"
+            className=" cursor-pointer  h-12 mx-8 filter grayscale hover:grayscale-0 transition-transform duration-200 transform hover:scale-110"
           />
           <img
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://laravel.com/"
             src={laravel}
             alt="Laravel"
-            className="h-12 mx-2 filter grayscale hover:grayscale-0 transition-transform duration-200 transform hover:scale-110"
+            className=" cursor-pointer  h-12 mx-8 filter grayscale hover:grayscale-0 transition-transform duration-200 transform hover:scale-110"
           />
           <img
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.isla-dev.com/synchro/#"
             src={mysql}
             alt="MySQL"
-            className="h-12 mx-2 filter grayscale hover:grayscale-0 transition-transform duration-200 transform hover:scale-110"
+            className=" cursor-pointer  h-12 mx-8 filter grayscale hover:grayscale-0 transition-transform duration-200 transform hover:scale-110"
           />
         </div>
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">
