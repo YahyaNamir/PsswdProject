@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./menu.css";
+
 const Sidebar = ({ projectId, setProjectSelected }) => {
   const navigate = useNavigate();
   const [showLog, setShowLog] = useState(false);
@@ -20,18 +21,18 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
   return (
     <div className="h-screen w-64 bg-gray-100 text-gray-900 flex flex-col border-r border-gray-300 fixed top-0 left-0">
       <div className="p-4 border-b border-gray-300">
-        <h1 className="text-2xl font-bold text bg-clip-text text-transparent bg-gradient-to-r from-stone-900 to-blue-200">
+        <h1 className="text-2xl font-bold text bg-clip-text text-transparent bg-gradient-to-r from-stone-900 to-sky-200">
           IWACO
         </h1>
       </div>
 
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-        <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
+        <h2 className="px-3 py-1 text-lg text-sky-700 font-semibold border-b border-gray-300">
           <b>Getting Started</b>
         </h2>
         <NavLink
           to={`/project/${projectId}/introduction`}
-          className="block py-2 px-3 rounded hover:bg-gray-300 "
+          className="block py-2 px-3 rounded hover:bg-gray-300"
         >
           Introduction
         </NavLink>
@@ -65,7 +66,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
         >
           Architectures
         </NavLink>
-        <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
+        <h2 className="px-3 py-1 text-lg text-sky-700 font-semibold border-b border-gray-300">
           <b>Updates</b>
         </h2>
         <NavLink
@@ -86,7 +87,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
         >
           Settings
         </NavLink>
-        <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
+        <h2 className="px-3 py-1 text-lg text-sky-700 font-semibold border-b border-gray-300">
           <b>Services</b>
         </h2>
         <NavLink
@@ -101,14 +102,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
         >
           Subscription
         </NavLink>
-        {/* <a
-          href="/"
-          className="block py-2 px-3 rounded hover:bg-gray-300"
-          onClick={handleLogoutClick}
-        >
-          Logout
-        </a> */}
-        <h2 className="px-3 py-1 text-lg text-gray-800 font-semibold border-b border-gray-300">
+        <h2 className="px-3 py-1 text-lg text-sky-700 font-semibold border-b border-gray-300">
           <b>Domains</b>
         </h2>
         <NavLink
@@ -121,7 +115,63 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
           to={`/project/${projectId}/subscription_D`}
           className="block py-2 px-3 rounded hover:bg-gray-300"
         >
-          Subscription
+          Access
+        </NavLink>
+        <h2 className="px-3 py-1 text-lg text-sky-700 font-semibold border-b border-gray-300">
+          <b>Mobile</b>
+        </h2>
+
+        <NavLink
+          to={`/project/${projectId}/mobile_installation`}
+          className="block py-2 px-3 rounded hover:bg-gray-300"
+        >
+          Installation
+        </NavLink>
+        <NavLink
+          to={`/project/${projectId}/mobile_technologies`}
+          className="block py-2 px-3 rounded hover:bg-gray-300"
+        >
+          Technologies
+        </NavLink>
+        <NavLink
+          to={`/project/${projectId}/mobile_ci_cd`}
+          className="block py-2 px-3 rounded hover:bg-gray-300"
+        >
+          CI/CD
+        </NavLink>
+        <NavLink
+          to={`/project/${projectId}/mobile_architectures`}
+          className="block py-2 px-3 rounded hover:bg-gray-300"
+        >
+          Architectures
+        </NavLink>
+        <h2 className="px-3 py-1 text-lg text-sky-700 font-semibold border-b border-gray-300">
+          <b>Web</b>
+        </h2>
+
+        <NavLink
+          to={`/project/${projectId}/web_installation`}
+          className="block py-2 px-3 rounded hover:bg-gray-300"
+        >
+          Installation
+        </NavLink>
+        <NavLink
+          to={`/project/${projectId}/web_technologies`}
+          className="block py-2 px-3 rounded hover:bg-gray-300"
+        >
+          Technologies
+        </NavLink>
+        <NavLink
+          to={`/project/${projectId}/web_ci_cd`}
+          className="block py-2 px-3 rounded hover:bg-gray-300"
+        >
+          CI/CD
+        </NavLink>
+        <NavLink
+          to={`/project/${projectId}/web_architectures`}
+          className="block py-2 px-3 rounded hover:bg-gray-300"
+        >
+          Architectures
         </NavLink>
       </nav>
 

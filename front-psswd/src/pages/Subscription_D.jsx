@@ -1,70 +1,70 @@
 import React from "react";
 
 const Subscription_D = () => {
+  const roleMap = {
+    Admin: "Full Access",
+    Developer: "Edit Access",
+    Designer: "Read Only",
+    Viewer: "No Access",
+    Manager: "Limited Access",
+  };
+
   const accessData = [
     {
       project: "Project A",
       role: "Admin",
-      access: "Full Access",
-      email: "admin@example.com",
+      email: "admin@ex.com",
     },
     {
       project: "Project A",
       role: "Developer",
-      access: "Read Only",
-      email: "developer1@example.com",
+      email: "developer1@ex.com",
     },
     {
       project: "Project B",
       role: "Designer",
-      access: "Edit Access",
-      email: "designer@example.com",
-    },
-    {
-      project: "Project C",
-      role: "Admin",
-      access: "Full Access",
-      email: "admin2@example.com",
+      email: "designer@ex.com",
     },
     {
       project: "Project B",
       role: "Developer",
-      access: "Edit Access",
-      email: "developer2@example.com",
+      email: "developer2@ex.com",
     },
     {
       project: "Project C",
+      role: "Admin",
+      email: "admin2@ex.com",
+    },
+
+    {
+      project: "Project C",
       role: "Designer",
-      access: "Read Only",
-      email: "designer2@example.com",
+      email: "designer2@ex.com",
     },
     {
       project: "Project D",
       role: "Admin",
-      access: "Full Access",
-      email: "admin3@example.com",
+      email: "admin3@ex.com",
     },
     {
       project: "Project D",
       role: "Developer",
-      access: "Read Only",
-      email: "developer3@example.com",
+      email: "developer3@ex.com",
     },
     {
       project: "Project D",
       role: "Designer",
-      access: "Edit Access",
-      email: "designer3@example.com",
+      email: "designer3@ex.com",
     },
   ];
 
   return (
-    <div className="bg-gray-100 flex flex-col w-full">
+    <div className="bg-gray-100 flex flex-col w-full p-4">
       <div className="w-full">
-        <h1 className="text-3xl font-bold text-gray-900 text-center w-full mb-4">
+        <h1 className="text-3xl font-bold text-gray-900 text-center w-full mb-6">
           Project Access
         </h1>
-        <div className="overflow-hidden rounded-lg shadow-lg w-full">
+        <div className="overflow-hidden rounded-lg shadow-xl w-full">
           <table className="w-full bg-white shadow-lg hover:shadow-xl">
             <thead>
               <tr className="bg-gray-100 border-b border-gray-200">
@@ -96,7 +96,9 @@ const Subscription_D = () => {
                     {item.project}
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap">{item.role}</td>
-                  <td className="py-4 px-6 whitespace-nowrap">{item.access}</td>
+                  <td className="py-4 px-6 whitespace-nowrap">
+                    {roleMap[item.role]}
+                  </td>
                   <td className="py-4 px-6 whitespace-nowrap">{item.email}</td>
                 </tr>
               ))}
@@ -107,4 +109,5 @@ const Subscription_D = () => {
     </div>
   );
 };
+
 export default Subscription_D;
