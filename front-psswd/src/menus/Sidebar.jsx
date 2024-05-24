@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-
+import "./menu.css";
 const Sidebar = ({ projectId, setProjectSelected }) => {
   const navigate = useNavigate();
   const [showLog, setShowLog] = useState(false);
