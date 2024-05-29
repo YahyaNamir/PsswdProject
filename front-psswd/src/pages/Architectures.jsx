@@ -1,5 +1,4 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import fig1 from "../picture/fig1.png";
 import synch from "../picture/synch.jpg";
 import mysql from "../picture/1200px-MySQL.svg.png";
@@ -10,7 +9,6 @@ import php from "../picture/PHP-logo.svg.webp";
 import restApi from "../picture/rest-api-icon.webp";
 
 function Architectures() {
-  const { projectId } = useParams();
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
