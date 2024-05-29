@@ -29,7 +29,7 @@ const Help = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center mb-6 p-4 border border-gray-300 rounded-lg shadow-lg transition-shadow">
+      <div className="flex flex-col md:flex-row items-center mb-6 p-4 border border-gray-300 rounded-lg shadow-xl transition-shadow">
         <img
           src={exemple_api}
           alt="exemple_api"
