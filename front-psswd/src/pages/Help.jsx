@@ -40,7 +40,7 @@ const Help = () => {
           <br /> End point:{" "}
           <button
             type="button"
-            class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3 py-1 me-2 mb-2 "
+            class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-3 py-1 me-2 mb-2 "
           >
             POST
           </button>
