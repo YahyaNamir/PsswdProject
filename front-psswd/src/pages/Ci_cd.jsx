@@ -42,8 +42,8 @@ const Ci_cd = () => {
               bases de données
             </li>
             <li>
-              Les comptes des utilisateurs qui ont accès au tableau de bord et
-              à l'API.
+              Les comptes des utilisateurs qui ont accès au tableau de bord et à
+              l'API.
             </li>
           </ul>
           <p className="mt-4">
@@ -56,7 +56,11 @@ const Ci_cd = () => {
             </a>
           </p>
         </div>
-        <img src={dashboard} alt="Dashboard" className="w-1/2 h-auto object-cover" />
+        <img
+          src={dashboard}
+          alt="Dashboard"
+          className="w-1/2 h-auto object-cover"
+        />
       </div>
     </div>
   );

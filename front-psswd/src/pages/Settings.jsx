@@ -10,8 +10,8 @@ const Settings = () => {
       <div className="bg-white shadow-xl rounded-xl p-4 mb-4 ">
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
           Cette solution a été développée pour alimenter une base de données
-          utilisée par l'équipe de BI pour créer des KPI et assurer leur mise
-          à jour régulière.
+          utilisée par l'équipe de BI pour créer des KPI et assurer leur mise à
+          jour régulière.
         </p>
         <p className="text-lg curs text-gray-700 mb-6 leading-relaxed">
           Une synchronisation programmée toutes les heures (à la minute 40)
@@ -20,8 +20,8 @@ const Settings = () => {
           client, la livraison, les produits et les quantités commandées.
         </p>
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          Des accès à la base de données sont fournis à l'équipe BI pour
-          accéder aux vues pertinentes.
+          Des accès à la base de données sont fournis à l'équipe BI pour accéder
+          aux vues pertinentes.
         </p>
         <img
           src={sequances_bi}
@@ -39,9 +39,7 @@ const Settings = () => {
           <li>
             <strong>Synchro. - Shopify</strong>
             <ol className="list-decimal list-inside ml-6">
-              <li>
-                Connexion via l'API Shopify pour récupérer les commandes
-              </li>
+              <li>Connexion via l'API Shopify pour récupérer les commandes</li>
               <li>Mise à jour de la base de données</li>
             </ol>
           </li>
