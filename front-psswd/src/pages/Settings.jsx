@@ -62,7 +62,7 @@ const Settings = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Documentation de l'API Shopify
+            Documentation de l'API Shopify.
           </a>
         </p>
       </div>
