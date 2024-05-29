@@ -175,7 +175,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
         </NavLink>
       </nav>
 
-      {showLog && (
+      {/* {showLog && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="bg-gray-800 bg-opacity-50 absolute inset-0"></div>
           <div className="bg-white p-6 rounded-lg shadow-lg z-10">
@@ -197,7 +197,7 @@ const Sidebar = ({ projectId, setProjectSelected }) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

@@ -33,7 +33,8 @@ const Details_S = () => {
           L'application est créée sous Framework Laravel 10 en raison de sa structure MVC, de sa documentation complète, de sa facilité de développement, de ses fonctionnalités de sécurité avancées, de sa couche d'abstraction de base de données puissante et de sa communauté active de développeurs.
         </p>
         <p className="text-base text-gray-700 leading-relaxed">
-          Pour plus d'informations, visitez: <a href="https://github.com/laravel/laravel" className="text-blue-500 hover:underline">Laravel GitHub</a>
+          Pour plus d'informations, visitez: <a href="https://github.com/laravel/laravel" target="_blank"
+            rel="noopener noreferrer" className="text-blue-500 hover:underline">Laravel GitHub</a>
         </p>
       </div>
 
