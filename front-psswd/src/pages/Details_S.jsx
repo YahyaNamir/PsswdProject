@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const Details_S = () => {
-  const { projectId } = useParams();
 
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
