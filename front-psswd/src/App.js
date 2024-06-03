@@ -12,13 +12,18 @@ import Architectures from "./pages/Architectures";
 import Update from "./pages/Update";
 import Help from "./pages/Help";
 import Settings from "./pages/Settings";
-import Domain from "./pages/Domain";
 import Details_S from "./pages/Details_S";
+import Subscription_S from "./pages/Subscription_S";
 import Details_D from "./pages/Details_D";
 import Subscription_D from "./pages/Subscription_D";
-import Subscription_S from "./pages/Subscription_S";
-import Logout_D from "./pages/Logout_D";
-import Logout_S from "./pages/Logout_S";
+import MobileInstallation from "./pages/MobileInstallation";
+import MobileTechnologies from "./pages/MobileTechnologies";
+import MobileCiCd from "./pages/MobileCiCd";
+import MobileArchitectures from "./pages/MobileArchitectures";
+import WebInstallation from "./pages/WebInstallation";
+import WebTechnologies from "./pages/WebTechnologies";
+import WebCiCd from "./pages/WebCiCd";
+import WebArchitectures from "./pages/WebArchitectures";
 import HomePage from "./pages/HomePage";
 
 function App() {
@@ -32,17 +37,13 @@ function App() {
     { id: 2, name: "Project B" },
     { id: 3, name: "Project C" },
   ];
-  
+
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <TopMenu />
         <div className="flex flex-1">
-          <Sidebar
-            projectId={projectSelected}
-            setProjectSelected={setProjectSelected}
-            projects={projects}
-          />
+          <Sidebar projectId={projectSelected} />
           <main className="flex-1 flex p-8 bg-white ml-64 mr-16 overflow-y-auto">
             <Routes>
               <Route
@@ -78,6 +79,10 @@ function App() {
                 element={<Details_S />}
               />
               <Route
+                path="/project/:projectId/subscription_S"
+                element={<Subscription_S />}
+              />
+              <Route
                 path="/project/:projectId/details_D"
                 element={<Details_D />}
               />
@@ -86,18 +91,37 @@ function App() {
                 element={<Subscription_D />}
               />
               <Route
-                path="/project/:projectId/subscription_S"
-                element={<Subscription_S />}
+                path="/project/:projectId/mobile_installation"
+                element={<MobileInstallation />}
               />
               <Route
-                path="/project/:projectId/logout_D"
-                element={<Logout_D />}
+                path="/project/:projectId/mobile_technologies"
+                element={<MobileTechnologies />}
               />
               <Route
-                path="/project/:projectId/logout_S"
-                element={<Logout_S />}
+                path="/project/:projectId/mobile_ci_cd"
+                element={<MobileCiCd />}
               />
-              <Route path="/project/:projectId/domain" element={<Domain />} />
+              <Route
+                path="/project/:projectId/mobile_architectures"
+                element={<MobileArchitectures />}
+              />
+              <Route
+                path="/project/:projectId/web_installation"
+                element={<WebInstallation />}
+              />
+              <Route
+                path="/project/:projectId/web_technologies"
+                element={<WebTechnologies />}
+              />
+              <Route
+                path="/project/:projectId/web_ci_cd"
+                element={<WebCiCd />}
+              />
+              <Route
+                path="/project/:projectId/web_architectures"
+                element={<WebArchitectures />}
+              />
             </Routes>
           </main>
           <RightSideMenu setProjectSelected={setProjectSelected} />

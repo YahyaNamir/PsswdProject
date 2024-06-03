@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const Details_S = () => {
-
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">

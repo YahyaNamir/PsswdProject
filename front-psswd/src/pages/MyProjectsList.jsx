@@ -50,7 +50,7 @@ const MyProjectsList = ({ setProjectSelected }) => {
               <td className="py-3 px-4">
                 <Link
                   to={`/project/${project.id}/introduction`}
-                  onClick={() => handleProjectClick(project)}
+                  onClick={() => handleProjectClick(project.id)}
                   className="text-lg text-gray-800 font-medium hover:text-white hover:bg-blue-800 hover:shadow-md px-2 py-1 rounded-md transition duration-400 block"
                 >
                   {project.name}
