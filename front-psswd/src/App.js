@@ -37,7 +37,6 @@ function App() {
     { id: 2, name: "Project B" },
     { id: 3, name: "Project C" },
     { id: 4, name: "Project D" },
-    { id: 5, name: "Project E" },
   ];
 
   return (
